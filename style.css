@@ -1,63 +1,145 @@
-/* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set default font and background color */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    font-family: "Neucha", serif;
 }
 
-/* Container class for centering content */
-.container {
-    width: 80%;
-    margin: auto;
+h1 {
+    font-family: "Archivo Black", serif;
+
+}
+
+.people {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.person {
+    width: 400px;
+    height: 700px;
+    background-color: red;
+
+    position: absolute;
+    left: 50%; 
+    bottom: 0;
+
+    transition: 0.25s;
+}
+
+.game {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url("https://static.wikia.nocookie.net/doki-doki-literature-club/images/5/50/Club.png/revision/latest/scale-to-width-down/1200?cb=20171231181915");
+    background-size: cover;
+}
+
+.dialogue-box-container {
+    position: absolute;
+    width: 100vw; 
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialogue-box-container > div {
+    max-width: 1000px;
+    width: 100%;
+    height: 200px; 
+    padding: 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#person-name {
+    padding-left: 15px;
+    font-size: 30px;
+    font-family: "Archivo Black", serif;
+}
+
+#dialogue-box {
+    border-radius: 10px;
+    height: 100%;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+
+    font-family: "Neucha", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.popup {
+    position: fixed;
+
+    z-index: 1;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.25s;
+}
+
+.popup > div {
+    max-width: 500px;
+    width: 100vw;
+
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+
+    box-sizing: border-box;
+
     overflow: hidden;
 }
 
-/* Header styles */
-header {
-    background: #333;
-    color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #77aaff 3px solid;
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-header ul {
-    padding: 0;
-    list-style: none;
-}
-
-header li {
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-
-/* Main content styles */
-main {
-    padding: 20px;
-    background: #fff;
-    margin-top: 20px;
-}
-
-/* Footer styles */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
+.popup button {
+    width: 100%;
     padding: 10px;
-    margin-top: 20px;
+
+    height: 50px;
+
+    
+    border: none;
+
+    transition: 0.25s;
+    
+    font-size: 16px;
+    font-family: "Archivo Black", serif;
+
+    background-color: transparent;
+
+}
+
+#googleSignIn {
+    background-color: black;
+    color: white;
+}
+
+#googleSignIn:hover {
+    background-color: #333;
+    cursor: pointer;
 }

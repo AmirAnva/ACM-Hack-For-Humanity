@@ -4,17 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACM Hack For Humanity</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to ACM Hack For Humanity</h1>
-    </header>
-    <main>
-        <p>This is the main content area.</p>
-    </main>
-    <footer>
-        <p>&copy; 2024 ACM Hack For Humanity. All rights reserved.</p>
-    </footer>
+    <div class="popup" id="sign-in-popup" style="opacity: 0; pointer-events: none;">
+        <div>
+            <h1>Welcome</h1>
+            <p>Sign in to track your progress, earn achievements, and recieved a certificate of completion!</p>
+            <button id="continue-signed-out">Continue Signed Out</button>
+            <button id="googleSignIn">Sign In With Google</button>
+        </div>
+    </div>
+    <div class="game">
+        <div id="choices">
+            <button>CHOICE 1</button>
+            <button>CHOICE 1</button>
+            <button>CHOICE 1</button>            
+        </div>
+        <div class="people">
+            <img src="" id="raima" class="person" style="display: none;">
+            <img src="" id="nate" class="person" style="display: none;">
+            <img src="" id="justin" class="person" style="display: none;">
+            <img src="" id="tanuj" class="person" style="display: none;">
+            <img src="" id="amir" class="person" style="display: none;">
+        </div>
+        
+        <div class="dialogue-box-container">
+            <div>
+                <div id="person-name">
+                    Raima
+                </div>
+                <div id="dialogue-box">
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="login.js" type="module"></script>
+<script src="scene.js"></script>
+<script>
+    var levelIndex = 0;
+    var sceneIndex = 0;
+    document.getElementById('continue-signed-out').addEventListener('click', function() {
+        let popup = document.getElementById('sign-in-popup');
+        popup.style.opacity = 0;
+        popup.style.pointerEvents = 'none';
+    });
+
+    function showDialogueFrom(person, dialogue) {
+        const dialogueBox = document.getElementById('dialogue-box');
+        const personName = document.getElementById('person-name');
+        personName.textContent = person;
+        dialogueBox.textContent = '';
+
+        let i = 0;
+        function typeWriter() {
+            if (i < dialogue.length) {
+                dialogueBox.textContent += dialogue.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        typeWriter();
+    }
+
+    visible_ids = [];
+    function addPerson(id) {
+        const person = document.getElementById(id);
+        if (person) {
+            person.style.display = 'block';
+            visible_ids.push(id);
+            const totalVisible = visible_ids.length;
+            const containerWidth = document.querySelector('.people').offsetWidth;
+            const personWidth = person.offsetWidth;
+            const spacing = (containerWidth - (totalVisible * personWidth)) / (totalVisible + 1);
+
+            visible_ids.forEach((visibleId, index) => {
+                const visiblePerson = document.getElementById(visibleId);
+                visiblePerson.style.left = `${spacing + index * (personWidth + spacing)}px`;
+            });
+        }
+    }
+
+    function removePerson(id) {
+
+    }
+
+    setTimeout(() => {
+        getAndShowDialog()
+    }, 1000);
+
+    function getAndShowDialog(){
+
+        let dialog = levels[levelIndex][sceneIndex].getDialog();
+        showDialogueFrom(dialog.characterName, dialog.text);
+
+        let people = dialog.getActiveCharacters();
+        console.log(dialog)
+        people.forEach(person => {
+            addPerson(person);
+        });
+
+        if (dialog.hasChoice){ //if the dialog has a choice
+            console.log("choice time (will move to new scene after this)")
+            let choiceOptions = levels[levelIndex][sceneIndex].getChoices();
+            console.log(choiceOptions);
+
+            // when you make the choice html, make sure that the onlclick is choose(choice.getSceneForward())
+
+        }
+    }
+
+    function choose(forward){
+        sceneIndex = forward;
+        getAndShowDialog();
+    }
+
+</script>
 </html>
