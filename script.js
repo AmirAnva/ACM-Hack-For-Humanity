@@ -105,8 +105,13 @@ function showDialogueFrom(person, dialogue, hasChoice) {
 
 var visible_ids = [];
 function addPerson(id) {
+    console.log("adding id "+id)
     const person = document.getElementById(id);
-
+    if (id == "Claire"){
+        person.src = claireImages[Math.floor(Math.random() * claireImages.length)];
+    } else {
+        person.src = chadImages[Math.floor(Math.random() * chadImages.length)];
+    }
     if (person) {
         person.style.display = 'block';
         visible_ids.push(id);
@@ -139,7 +144,6 @@ async function getAndShowDialog(){
     let people = dialog.getActiveCharacters();
     activeCharacters.forEach(character => removePerson(character));
     activeCharacters = people;
-    let currentId = 1;
     people.forEach(character => {
         addPerson(character);
     });
@@ -150,8 +154,10 @@ async function getAndShowDialog(){
 function choose(forward){
     console.log("chose " + forward)
     sceneIndex = forward;
-    if (sceneIndex == -1){
+    if (sceneIndex == -1 || sceneIndex == "END"){
         console.log("Level One Fin")
+        document.getElementById("completion-popup").style.opacity = 1;
+        document.getElementById("completion-popup").style.pointerEvents = "all";
     }
     dialogIndex = 0;
     isAdvancable = true;

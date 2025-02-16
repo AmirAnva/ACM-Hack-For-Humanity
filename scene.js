@@ -236,11 +236,11 @@ const levels = [
         ),
         "S4A1a": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
-                new DialogOption("Yeah, you're right. Good call. Just one for now. Don’t want to, like, totally lose it tonight. Especially with Sarah here. Don’t want to embarrass myself.", "Claire", true, ["Claire"]),
+                new DialogOption("Yeah, you're right. Good call. Just one for now. Don’t want to, like, totally lose it tonight. Especially with Chad here. Don’t want to embarrass myself.", "Claire", true, ["Claire"]),
                 new DialogOption("Actually, she's good for now. We're pacing ourselves tonight.", "You", false, ["You"]),
-                new DialogOption("Chad, sensing your firmness, backs off. Claire takes her one shot and then joins Sarah on the dance floor. You keep an eye on them, but Claire seems to be having a good time and sticking to her plan.", "Narrator", true, [])
+                new DialogOption("Chad, sensing your firmness, backs off. Claire takes her one shot and then joins Chad on the dance floor. You keep an eye on them, but Claire seems to be having a good time and sticking to her plan.", "Narrator", true, [])
             ],
             [
                 new ChoiceOption("That's the plan! I'm glad you're sticking to it. I'm proud of you.", "END"),
@@ -250,7 +250,7 @@ const levels = [
         ),
         "S4A1b": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
                 new DialogOption("Yeah, yeah, I know. Just one. But…it’s a party!", "Claire", true, ["Claire"]),
                 new DialogOption("You hesitate. You’re not sure if you should intervene. Claire did say she was only having one, but Chad is being pushy…", "Narrator", true, [])
@@ -263,7 +263,7 @@ const levels = [
         ),
         "S4A1c": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
                 new DialogOption("Alright, have fun! Just…try not to do anything too stupid. I’m gonna go find some other people to talk to.", "You", false, ["You"]),
                 new DialogOption("Claire, feeling a little emboldened by your lack of attention and Chad's flattery, decides to take him up on the offer.", "Narrator", true, [])
@@ -276,7 +276,7 @@ const levels = [
         ),
         "S4A2a": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
                 new DialogOption("Sounds good! Just…have a good time. Don’t, like, do anything you’ll really regret.", "You", true, ["You"])
             ],
@@ -288,7 +288,7 @@ const levels = [
         ),
         "S4A2b": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
                 new DialogOption("Alright, but maybe alternate with a seltzer at some point? Just…you know…for hydration purposes. Wouldn’t want you, like, totally losing it later.", "You", true, ["You"])
             ],
@@ -300,7 +300,7 @@ const levels = [
         ),
         "S4A2c": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
                 new DialogOption("Awesome! I think I’ll grab another drink too. Let’s do this! This party is getting good.", "You", true, ["You"])
             ],
@@ -312,7 +312,7 @@ const levels = [
         ),
         "S4A3a": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
                 new DialogOption("Awesome! Let’s go!", "Claire", false, ["Claire"]),
                 new DialogOption("You're busy ordering your drink and don't pay much attention to their interaction. You're both now prioritizing the party over responsible DDing.", "Narrator", true, ["Narrator"])
@@ -325,20 +325,20 @@ const levels = [
         ),
         "S4A3b": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
                 new DialogOption("Yeah, okay. One more. But then we’re dancing!", "Claire", false, ["Claire"]),
                 new DialogOption("You notice Claire talking to Chad and hear her say \"sure.\" You feel a slight pang of guilt but shrug it off, telling yourself you'll keep an eye on things.", "Narrator", true, ["Narrator"])
             ],
             [
-                new ChoiceOption("Just one more and then Sarah better make good on these dance moves!", "END"),
+                new ChoiceOption("Just one more and then Chad better make good on these dance moves!", "END"),
                 new ChoiceOption("I'm trying to drive tonight...okay, just one more.", "END")
             ],
             "S4A3b"
         ),
         "S4A3c": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
                 new DialogOption("Yeah, yeah, we'll figure it out.", "Claire", false, ["Claire"]),
                 new DialogOption("You're preoccupied with your own conversation and only half-hear this exchange. You're vaguely concerned about getting home later but don't actively intervene or set any limits.", "Narrator", true, ["Narrator"])
@@ -463,9 +463,9 @@ const levels = [
         ),
         "S4C1a": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
-                new DialogOption("Yeah, you're right. Good call. Just one for now. Don’t want to, like, totally lose it tonight. Especially with Sarah here. Don’t want to embarrass myself.", "Claire", true, ["Claire"])
+                new DialogOption("Yeah, you're right. Good call. Just one for now. Don’t want to, like, totally lose it tonight. Especially with Chad here. Don’t want to embarrass myself.", "Claire", true, ["Claire"])
             ],
             [
                 new ChoiceOption("Thanks for thinking of me. You're a great friend.", "END"),
@@ -475,7 +475,7 @@ const levels = [
         ),
         "S4C1b": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
                 new DialogOption("Yeah, good idea. A seltzer sounds good. Thanks.", "Claire", true, ["Claire"])
             ],
@@ -487,7 +487,7 @@ const levels = [
         ),
         "S4C1c": new Scene(
             [
-                new DialogOption("Alright, shot time! Number one! This party is getting wild! Sarah's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
+                new DialogOption("Alright, shot time! Number one! This party is getting wild! Chad's already promised to teach me some new dance moves. It’s gonna be legendary!", "Claire", false, ["Claire"]),
                 new DialogOption("Hey, hold up a sec. Remember we talked about pacing yourself? Maybe just one shot for now, okay? You said you were going to take it easy tonight, and, you know, I'm driving. Plus, you know how you get after a few. Don’t want any regrets in the morning.", "You", false, ["You"]),
                 new DialogOption("Yeah, yeah, I know. I got it.", "Claire", true, ["Claire"])
             ],
