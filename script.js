@@ -118,11 +118,11 @@ function addPerson(id) {
         const totalVisible = visible_ids.length;
         const containerWidth = document.querySelector('.people').offsetWidth;
         const personWidth = person.offsetWidth;
-        const spacing = (containerWidth - (totalVisible * personWidth)) / (totalVisible + 1);
+        //const spacing = (containerWidth - (totalVisible * personWidth)) / (totalVisible + 1);
 
         visible_ids.forEach((visibleId, index) => {
             const visiblePerson = document.getElementById(visibleId);
-            visiblePerson.style.left = `${spacing + index * (personWidth + spacing)}px`;
+            //visiblePerson.style.left = `${spacing + index * (personWidth + spacing)}px`;
         });
     }
 }

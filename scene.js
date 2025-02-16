@@ -85,7 +85,7 @@ const levels = [
                 new DialogOption("Yeah, yeah, I know. I got this.", "Claire", true, ["Claire"])
             ],
             [
-                new ChoiceOption("Okay, go get her. But seriously, Claire, I'm serious. Pace yourself.", "S3A1"),
+                new ChoiceOption("Okay, go get him. But seriously, Claire, I'm serious. Pace yourself.", "S3A1"),
                 new ChoiceOption("Alright, have fun. Just…try not to do anything too crazy.", "S3A2"),
                 new ChoiceOption("Okay, but water only if you get really sloppy. Seriously.", "S3A3")
             ],
@@ -119,7 +119,7 @@ const levels = [
         ),
         "S3A1": new Scene(
             [
-                new DialogOption("She said yes! We're gonna grab another drink and then maybe hit the dance floor. This party is awesome!", "Claire", false, ["Claire"]),
+                new DialogOption("He said yes! We're gonna grab another drink and then maybe hit the dance floor. This party is awesome!", "Claire", false, ["Claire"]),
                 new DialogOption("That sounds fun! Just…remember what we talked about, okay? Pacing is key. And hey, maybe grab a seltzer between drinks? Keeps you hydrated and helps you last longer. Seriously, Claire, I'm not trying to be a buzzkill, but I want us both to have a good night, and that means being responsible.", "You", false, ["You"]),
                 new DialogOption("Yeah, you're right. I'll be careful.", "Claire", true, ["Claire"])
             ],
@@ -132,7 +132,7 @@ const levels = [
         ),
         "S3A2": new Scene(
             [
-                new DialogOption("She's totally into me! We're gonna grab another drink and then maybe hit the dance floor. This party is awesome!", "Claire", false, ["Claire"]),
+                new DialogOption("He's totally into me! We're gonna grab another drink and then maybe hit the dance floor. This party is awesome!", "Claire", false, ["Claire"]),
                 new DialogOption("That's great, Claire! Just…try not to go too overboard, okay? I mean, it's a party, right? Just…be sensible. You know what I mean. Have fun, but, like, not too much fun. You know?", "You", false, ["You"]),
                 new DialogOption("Yeah, yeah, I got it.", "Claire", true, ["Claire"])
             ],
@@ -353,7 +353,7 @@ const levels = [
             [
                 new DialogOption("Alright, time for shot number one! Wish me luck!", "Claire", false, ["Claire"]),
                 new DialogOption("Good luck! Just…remember to grab a seltzer after that one, okay? Hydration is important.", "You", false, ["You"]),
-                new DialogOption("Yeah, good call. Don't want to get dehydrated.", "Claire", true, ["Claire"]),
+                new DialogOption("Yeah, good call. Don't want to get dehydrated.", "Claire", false, ["Claire"]),
                 new DialogOption("Claire gestures toward her seltzer. Chad, sensing she's not interested in getting overly intoxicated, moves on.", "Narrator", true, [])
             ],
             [
@@ -366,8 +366,8 @@ const levels = [
             [
                 new DialogOption("Alright, time for shot number one! Wish me luck!", "Claire", false, ["Claire"]),
                 new DialogOption("(You don't say anything, but you watch her as she takes the shot, gauging her reaction. She seems to handle it well.)", "You", false, ["You"]),
-                new DialogOption("Claire takes her shot and then chats with some friends. She seems to be having fun but not overdoing it.", "Narrator", true, []),
-                new DialogOption("Claire: Thanks, but I think I'm good for now.", "Claire", true, ["Claire"]),
+                new DialogOption("Claire takes her shot and then chats with some friends. She seems to be having fun but not overdoing it.", "Narrator", false, []),
+                new DialogOption("Claire: Thanks, but I think I'm good for now.", "Claire", false, ["Claire"]),
                 new DialogOption("Chad: (Chad tries to push it a little, saying something like, \"Come on, just one more,\", but Claire stands her ground. You're ready to step in if the situation escalates, but she seems to be handling it.)", "Chad", true, ["Chad"])
             ],
             [
@@ -416,8 +416,8 @@ const levels = [
             [
                 new DialogOption("Alright, shot time! Number one!", "Claire", false, ["Claire"]),
                 new DialogOption("You say nothing.", "You", false, ["You"]),
-                new DialogOption("She looks at you as she takes the first shot, her eyes wide with anticipation. She then goes for another drink, looking back at you with a smirk.", "Narrator", true, []),
-                new DialogOption("Okay, time for another one!", "Claire", true, ["Claire"]),
+                new DialogOption("She looks at you as she takes the first shot, her eyes wide with anticipation. She then goes for another drink, looking back at you with a smirk.", "Narrator", false, []),
+                new DialogOption("Okay, time for another one!", "Claire", false, ["Claire"]),
                 new DialogOption("Yeah, but remember we talked about keeping it reasonable? I'm driving, and I don’t want you getting too wasted.", "You", true, ["You"])
             ],
             [
