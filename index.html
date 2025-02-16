@@ -5,15 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ACM Hack For Humanity</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+        
     </style>
 </head>
 <body>
-    <div class="popup" id="sign-in-popup" style="opacity: 0; pointer-events: none;">
+
+    <div class="popup" id="completion-popup" style="z-index: 15; opacity: 0; pointer-events: none;">
+        <div style="padding: 5px; text-align: left;">
+            <h1 style="text-align: center;">Congratulations!</h1>
+            <p style="text-align: center;">You have completed the game!</p>
+            <p style="color: gray;">Your score: <span id="rating" style="color: white; font-size: 20px;">ur bad</span></p>
+            <p id="advice">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt est et sapien ullamcorper feugiat. Suspendisse nec congue purus. </p>
+        </div>
+    </div>
+
+    <div class="popup" id="history-popup" style="opacity: 0; pointer-events: none; z-index: 10;">
+        <div>
+            <div id="history">
+                
+            </div>
+        </div>
+        <button id="close-history-button" >
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="122.881px" height="122.88px" viewBox="0 0 122.881 122.88" xml:space="preserve">
+                <g stroke="white" stroke-width="3" fill="white">
+                    <path d="M80.16,37.369c1.301-1.302,3.412-1.302,4.713,0c1.301,1.301,1.301,3.411,0,4.713L65.512,61.444l19.361,19.362
+                        c1.301,1.301,1.301,3.411,0,4.713c-1.301,1.301-3.412,1.301-4.713,0L60.798,66.157L41.436,85.52
+                        c-1.301,1.301-3.412,1.301-4.713,0c-1.301-1.302-1.301-3.412,0-4.713l19.363-19.362L36.723,42.082
+                        c-1.301-1.302-1.301-3.412,0-4.713c1.301-1.302,3.412-1.302,4.713,0l19.363,19.362L80.16,37.369z"/>
+                </g>
+            </svg>    
+        </button>
+    </div>
+    <div class="popup" id="sign-in-popup" style="opacity: 1; pointer-events: all; z-index: 15;">
         <div>
             <h1>Welcome</h1>
             <p>Sign in to track your progress, earn achievements, and recieved a certificate of completion!</p>
@@ -22,110 +50,48 @@
         </div>
     </div>
     <div class="game">
+        <button id="history-button" style="z-index: 5;">
+            <svg xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 10.583333 10.583333" version="1.1" x="0px" y="0px"><g><path style="color:#FFFFFFFF;paint-order:fill markers stroke;" d="m 5.6210472,1.9851497 c -1.5193724,0 -2.8022364,1.029923 -3.1879169,2.428275 H 1.849187 a 0.19690052,0.19690052 0 0 0 -0.1581309,0.312643 l 0.8371575,1.145149 a 0.19690052,0.19690052 0 0 0 0.3183282,0 l 0.835607,-1.145149 A 0.19690052,0.19690052 0 0 0 3.523502,4.4134247 H 2.9845167 c 0.3663209,-1.1051 1.4062101,-1.899109 2.6365305,-1.899109 1.5374461,0 2.7791595,1.239648 2.7791595,2.777092 0,1.537445 -1.2417134,2.777608 -2.7791595,2.777608 -0.916215,1e-6 -1.7725998,-0.45158 -2.2908154,-1.207162 a 0.26458349,0.26458349 0 0 0 -0.3674189,-0.06821 0.26458349,0.26458349 0 0 0 -0.068212,0.368969 c 0.6165638,0.89898 1.63635,1.435571 2.7264465,1.435571 1.823429,0 3.3088421,-1.483346 3.3088421,-3.306774 0,-1.823427 -1.4854131,-3.306258 -3.3088421,-3.306258 z m -0.1834488,1.630908 a 0.26458349,0.26458349 0 0 0 -0.2635515,0.265617 v 1.636592 a 0.26460995,0.26460995 0 0 0 0.1152393,0.218591 l 0.8903837,0.607715 a 0.26458349,0.26458349 0 0 0 0.367419,-0.06873 0.26458349,0.26458349 0 0 0 -0.068728,-0.366903 L 5.7032136,5.3777067 V 3.8816747 A 0.26458349,0.26458349 0 0 0 5.4375984,3.6160577 Z" fill="#FFFFFF" fill-rule="evenodd" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></g><text x="0" y="25.583334" fill="#FFFFFF" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Alzam</text><text x="0" y="30.583334" fill="#FFFFFF" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
+        </button>
         <div id="choices">
-            <button>CHOICE 1</button>
-            <button>CHOICE 1</button>
-            <button>CHOICE 1</button>            
+            <div>
+                <!-- <h2>What will you do?</h2> -->
+                <div id="choice-holder">
+                    
+                </div>        
+            </div>
         </div>
-        <div class="people">
-            <img src="" id="raima" class="person" style="display: none;">
-            <img src="" id="nate" class="person" style="display: none;">
-            <img src="" id="justin" class="person" style="display: none;">
-            <img src="" id="tanuj" class="person" style="display: none;">
-            <img src="" id="amir" class="person" style="display: none;">
+        <div class="people" style="z-index: -1">
+            <img src="" id="Claire" class="person" style="display: none;">
+            <img src="" id="Chad" class="person" style="display: none;">
+            
         </div>
         
-        <div class="dialogue-box-container">
+        <div class="dialogue-box-container hidden" id="dialogue-box-container">
             <div>
-                <div id="person-name">
-                    Raima
+                <div>
+                    <div id="person-name">
+                        <div>
+                            Raima
+                        </div>
+                    </div>
+                    <div id="dialogue-box">
+    
+                    </div>
                 </div>
-                <div id="dialogue-box">
-
-                </div>
+                
             </div>
+
         </div>
     </div>
 </body>
 <script src="login.js" type="module"></script>
 <script src="scene.js"></script>
-<script>
-    var levelIndex = 0;
-    var sceneIndex = 0;
-    document.getElementById('continue-signed-out').addEventListener('click', function() {
-        let popup = document.getElementById('sign-in-popup');
-        popup.style.opacity = 0;
-        popup.style.pointerEvents = 'none';
-    });
-
-    function showDialogueFrom(person, dialogue) {
-        const dialogueBox = document.getElementById('dialogue-box');
-        const personName = document.getElementById('person-name');
-        personName.textContent = person;
-        dialogueBox.textContent = '';
-
-        let i = 0;
-        function typeWriter() {
-            if (i < dialogue.length) {
-                dialogueBox.textContent += dialogue.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        }
-        typeWriter();
-    }
-
-    visible_ids = [];
-    function addPerson(id) {
-        const person = document.getElementById(id);
-        if (person) {
-            person.style.display = 'block';
-            visible_ids.push(id);
-            const totalVisible = visible_ids.length;
-            const containerWidth = document.querySelector('.people').offsetWidth;
-            const personWidth = person.offsetWidth;
-            const spacing = (containerWidth - (totalVisible * personWidth)) / (totalVisible + 1);
-
-            visible_ids.forEach((visibleId, index) => {
-                const visiblePerson = document.getElementById(visibleId);
-                visiblePerson.style.left = `${spacing + index * (personWidth + spacing)}px`;
-            });
-        }
-    }
-
-    function removePerson(id) {
-
-    }
-
-    setTimeout(() => {
-        getAndShowDialog()
-    }, 1000);
-
-    function getAndShowDialog(){
-
-        let dialog = levels[levelIndex][sceneIndex].getDialog();
-        showDialogueFrom(dialog.characterName, dialog.text);
-
-        let people = dialog.getActiveCharacters();
-        console.log(dialog)
-        people.forEach(person => {
-            addPerson(person);
-        });
-
-        if (dialog.hasChoice){ //if the dialog has a choice
-            console.log("choice time (will move to new scene after this)")
-            let choiceOptions = levels[levelIndex][sceneIndex].getChoices();
-            console.log(choiceOptions);
-
-            // when you make the choice html, make sure that the onlclick is choose(choice.getSceneForward())
-
-        }
-    }
-
-    function choose(forward){
-        sceneIndex = forward;
-        getAndShowDialog();
-    }
-
+<script src="script.js" type="module"></script>
+<script type="module">
+    import { hideHistory, showHistory } from './script.js';
+    document.getElementById("history-button").onclick = showHistory;
+    document.getElementById("close-history-button").onclick = hideHistory;
+        
 </script>
 </html>

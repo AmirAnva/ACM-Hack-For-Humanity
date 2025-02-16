@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-
+import { getFirestore, setDoc, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+import { startGame } from './script.js';
 document.getElementById("googleSignIn").onclick = loginWithGoogle;
 
 // Your web app's Firebase configuration
@@ -34,17 +34,24 @@ async function loginWithGoogle() {
         const user = result.user;
         console.log('User Info:', user);
 
-        // Save additional user data
-        levelIndex = 0; // Example value
-        sceneIndex = 0; // Example value
-        await setDoc(doc(db, "users", user.uid), {
-            levelIndex: levelIndex,
-            sceneIndex: sceneIndex
-        });
-
+        // Retrieve additional user data
+        const userDoc = await getDoc(doc(db, "users", user.uid));
+        if (userDoc.exists()) {
+            const userData = userDoc.data();
+            console.log('User Data:', userData);
+            window.levelIndex = userData.levelIndex;
+            window.sceneIndex = userData.sceneIndex;
+            window.dialogIndex = userData.dialogIndex;
+            console.log('User Data:', { levelIndex, sceneIndex });
+        } else {
+            console.log('No such document!');
+        }
+        document.getElementById("sign-in-popup").style.display = "none";
         // Redirect to another page after successful login
         //window.location.href = "index.html";
+        startGame()
     } catch (error) {
+        console.log(error)
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -53,5 +60,20 @@ async function loginWithGoogle() {
         // The AuthCredential type that was used.
         const credential = GoogleAuthProvider.credentialFromError(error);
         console.error('Error during sign-in:', errorCode, errorMessage, email, credential);
+    }
+}
+
+export async function saveProgress(){
+    const user = auth.currentUser;
+    if (user) {
+        const userRef = doc(db, "users", user.uid);
+        await setDoc(userRef, {
+            levelIndex: window.levelIndex,
+            sceneIndex: window.sceneIndex,
+            dialogIndex: window.dialogIndex
+        });
+        console.log('User data saved!');
+    } else {
+        console.log('No user signed in!');
     }
 }
