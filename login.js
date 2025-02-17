@@ -6,13 +6,13 @@ document.getElementById("googleSignIn").onclick = loginWithGoogle;
 
 // Your web app's Firebase configuration (key is revoked this config section is inactive now)
 const firebaseConfig = {
-    apiKey: "AIzaSyA031wvjqtGeqscBEgYAP4lGEcQB7nL50Q",
+    apiKey: "",
     authDomain: "sign-with-for-story.firebaseapp.com",
     projectId: "sign-with-for-story",
     storageBucket: "sign-with-for-story.firebasestorage.app",
-    messagingSenderId: "270018919703",
-    appId: "1:270018919703:web:e3d05270dbe24274904b52",
-    measurementId: "G-4NH0NKE8QW"
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
 };
 
 // Initialize Firebase
