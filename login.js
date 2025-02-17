@@ -4,7 +4,7 @@ import { getFirestore, setDoc, doc, getDoc } from "https://www.gstatic.com/fireb
 import { startGame } from './script.js';
 document.getElementById("googleSignIn").onclick = loginWithGoogle;
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration (key is revoked this config section is inactive now)
 const firebaseConfig = {
     apiKey: "AIzaSyA031wvjqtGeqscBEgYAP4lGEcQB7nL50Q",
     authDomain: "sign-with-for-story.firebaseapp.com",
